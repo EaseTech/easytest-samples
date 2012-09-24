@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+ <!-- This is a version 4 POM file. -->
+ <modelVersion>4.0.0</modelVersion>
+ <!-- The project details. -->
+ <groupId>org.easetech</groupId>
+ <artifactId>easytest-samples</artifactId>
+ <packaging>jar</packaging>
+ <name>EasyTest Samples examples</name>
+ <description>EasyTest is a JUnit extension perform Data Driven Testing with ease and simplicity. 
+    It supports method parameters with Test annotation and much more.</description>
+ <url>https://github.com/EaseTech/easytest</url>
+ <version>0.5.0</version>
+
+ <developers>
+  <developer>
+   <id>anujgandharv</id>
+   <name>Anuj Kumar</name>
+   <email>anuj.gandharv@gmail.com</email>
+   <url>http://www.kumaranuj.com</url>
+  </developer>
+ </developers>
+
+
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>2.3.2</version>
+    <configuration>
+     <showDeprecation>true</showDeprecation>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+
+ <dependencies>
+  <dependency>
+   <groupId>junit</groupId>
+   <artifactId>junit</artifactId>
+   <version>4.10</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-api</artifactId>
+   <version>1.6.1</version>
+   <scope>compile</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>log4j</groupId>
+   <artifactId>log4j</artifactId>
+   <version>1.2.15</version>
+   <scope>runtime</scope>
+   <exclusions>
+    <exclusion>
+     <groupId>javax.mail</groupId>
+     <artifactId>mail</artifactId>
+    </exclusion>
+    <exclusion>
+     <groupId>javax.jms</groupId>
+     <artifactId>jms</artifactId>
+    </exclusion>
+    <exclusion>
+     <groupId>com.sun.jdmk</groupId>
+     <artifactId>jmxtools</artifactId>
+    </exclusion>
+    <exclusion>
+     <groupId>com.sun.jmx</groupId>
+     <artifactId>jmxri</artifactId>
+    </exclusion>
+   </exclusions>
+  </dependency>
+
+  <dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-log4j12</artifactId>
+   <version>1.6.1</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>jcl-over-slf4j</artifactId>
+   <version>1.6.1</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>net.sourceforge.javacsv</groupId>
+   <artifactId>javacsv</artifactId>
+   <scope>compile</scope>
+   <version>2.0</version>
+  </dependency>
+
+  <dependency>
+   <groupId>cglib</groupId>
+   <artifactId>cglib</artifactId>
+   <version>2.2.2</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.apache.poi</groupId>
+   <artifactId>poi</artifactId>
+   <version>3.8</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.apache.poi</groupId>
+   <artifactId>poi-examples</artifactId>
+   <version>3.8</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.jvnet.jaxb2_commons</groupId>
+   <artifactId>jaxb2-basics-runtime</artifactId>
+   <version>0.6.2</version>
+  </dependency>
+
+  <dependency>
+   <groupId>commons-lang</groupId>
+   <artifactId>commons-lang</artifactId>
+   <version>2.6</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-test</artifactId>
+   <version>3.1.0.RELEASE</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-context-support</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>compile</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-context</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>compile</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-core</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>compile</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-orm</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-tx</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-jdbc</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-aop</artifactId>
+   <version>3.1.0.RELEASE</version>
+   <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+   <groupId>org.easetech</groupId>
+   <artifactId>easytest</artifactId>
+   <version>0.6.0-SNAPSHOT</version>
+  </dependency>
+  
+  <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>ejb-api</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.6.5.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>3.6.5.Final</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.8</version>
+        </dependency>
+
+ </dependencies>
+</project>
