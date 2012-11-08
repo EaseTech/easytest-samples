@@ -1,0 +1,8 @@
+testCaseWithOneParameter,itemId
+ , 12
+ , 13
+ , 45
+testCaseWithTwoParameter,itemId,itemType
+ , 01,book
+ , 02,journal
+ , 03,ebook
