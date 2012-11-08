@@ -1,0 +1,1 @@
+Sample exploring various aspects of EasyTest
