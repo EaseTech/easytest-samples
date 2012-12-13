@@ -18,7 +18,7 @@ import org.easetech.easytest.samples.MockItemService;
 import org.junit.Test;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = { "xmlBasedData.xml" }, loaderType = LoaderType.XML)
+@DataLoader(filePaths = { "classpath:xmlBasedData.xml" }, loaderType = LoaderType.XML)
 @Report
 public class EasyTestReportExample {
 
@@ -26,11 +26,11 @@ public class EasyTestReportExample {
     public ItemService itemService = new MockItemService();
 
     @Test
-    public List<Item> getItemsData(@Param(name = "itemId")
-    ItemId itemId, @Param(name = "itemType")
-    String itemType, @Param(name = "expectedItems")
-    int expectedItems) {
-        List<Item> items = itemService.getItems(itemId, "", itemType);
+    public List<Item> getItemsData(
+        @Param(name = "itemId")Long itemId, 
+        @Param(name = "itemType")String itemType, 
+        @Param(name = "expectedItems")int expectedItems) {
+        List<Item> items = itemService.getItems(new ItemId(itemId), "", itemType);
         Assert.assertEquals(expectedItems, items.size());
         return items;
     }

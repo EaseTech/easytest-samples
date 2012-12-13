@@ -18,7 +18,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths={"xmlBasedData.xml"} , loaderType=LoaderType.XML)
+@DataLoader(filePaths={"classpath:xmlBasedData.xml"} , loaderType=LoaderType.XML)
 public class CaptureReturnedDataExample {
     
     private ItemService testSubject;
@@ -30,8 +30,11 @@ public class CaptureReturnedDataExample {
     
 
     @Test
-    public List<Item> getItemsData(@Param(name="itemId") ItemId itemId , @Param(name="itemType") String itemType , @Param(name="expectedItems")int expectedItems){
-        List<Item> items = testSubject.getItems(itemId, "", itemType);
+    public List<Item> getItemsData(
+        @Param(name="itemId") Long itemId , 
+        @Param(name="itemType") String itemType , 
+        @Param(name="expectedItems")int expectedItems){
+        List<Item> items = testSubject.getItems(new ItemId(itemId), "", itemType);
         Assert.assertEquals(expectedItems, items.size());
         return items;
     }

@@ -22,11 +22,15 @@ public class ItemId {
     public ItemId(Long id) {
         this.id = id;
     }
+    
+    public Long getValue(){
+        return id;
+    }
 
     /**
      * @return the toString representation
      */
-    @Override
+    
     public String toString() {
         return "ItemId [id=" + id + "]";
     }

@@ -25,7 +25,7 @@ public class EasyTestCustomLoaderExample {
     
     @Test
     @DataLoader(loader = CustomObjectDataLoader.class)
-    public void testGetItemsWithCustomLoader(@Param ItemId itemId){
+    public void testGetItemsWithCustomLoader(ItemId itemId){
         System.out.println("ItemId is :" + itemId.toString());
         Item item = testSubject.findItem(itemId);
         Assert.assertNotNull(item);

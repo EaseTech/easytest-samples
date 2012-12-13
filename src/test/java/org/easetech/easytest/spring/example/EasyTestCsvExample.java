@@ -15,7 +15,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = { "csvBasedData.csv" })
+@DataLoader(filePaths = { "classpath:csvBasedData.csv" })
 public class EasyTestCsvExample {
 
     private ItemService testSubject;
@@ -54,14 +54,14 @@ public class EasyTestCsvExample {
     }
 
 //     UNCOMMENT AND INTRODUCE YOUR OWN DATA
-     @Test
-     public void testCaseWithThreeParameter(@Param(name="itemId")int itemId , @Param(name="itemType")String itemType ,
-     @Param(name="searchText")String searchText){
-     System.out.println("testSimpleCaseWithTwoParameter : " + itemId +" and itemType :" + itemType +
-     " searchText is :" + searchText );   
-            ItemId id = new ItemId(Long.valueOf(itemId));
-            List<Item> items = testSubject.getItems(id, "", itemType);
-            Assert.assertNotNull(items);
-     }
+//     @Test
+//     public void testCaseWithThreeParameter(@Param(name="itemId")int itemId , @Param(name="itemType")String itemType ,
+//     @Param(name="searchText")String searchText){
+//     System.out.println("testSimpleCaseWithTwoParameter : " + itemId +" and itemType :" + itemType +
+//     " searchText is :" + searchText );   
+//            ItemId id = new ItemId(Long.valueOf(itemId));
+//            List<Item> items = testSubject.getItems(id, "", itemType);
+//            Assert.assertNotNull(items);
+//     }
 
 }

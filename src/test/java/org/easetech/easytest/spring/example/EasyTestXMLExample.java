@@ -1,12 +1,9 @@
 
 package org.easetech.easytest.spring.example;
 
-import sun.beans.editors.IntEditor;
-
-import junit.framework.Assert;
-
 import java.beans.PropertyEditorManager;
 import java.util.List;
+import junit.framework.Assert;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.loader.LoaderType;
@@ -22,7 +19,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = { "xmlBasedData.xml" }, loaderType = LoaderType.XML)
+@DataLoader(filePaths = { "classpath:xmlBasedData.xml" }, loaderType = LoaderType.XML)
 public class EasyTestXMLExample {
 
     private ItemService testSubject;
@@ -43,7 +40,7 @@ public class EasyTestXMLExample {
     public void getItemsData(@Param(name = "itemId")
     String itemId, @Param(name = "itemType")
     String itemType, @Param(name = "expectedItems")
-    String expectedItems) {
+    int expectedItems) {
         ItemId id = new ItemId(Long.valueOf(itemId)) ;
         List<Item> items = testSubject.getItems(id, "", itemType);       
         Assert.assertNotNull(items);

@@ -9,7 +9,9 @@ public class Item {
 
     private ItemId itemId;
 
-    
+    public Item(){
+        
+    }
     
 
     /**

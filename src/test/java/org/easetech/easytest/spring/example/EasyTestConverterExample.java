@@ -21,7 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths={"xmlBasedData.xml"} , loaderType= LoaderType.XML)
+@DataLoader(filePaths={"classpath:xmlBasedData.xml"} , loaderType= LoaderType.XML)
 public class EasyTestConverterExample {
     
     private ItemService testSubject;
@@ -38,7 +38,7 @@ public class EasyTestConverterExample {
     }
     
     @Test
-    public void getItemsData(@Param Item item){
+    public void getItemsData(Item item){
         System.out.println("Item is" + item);
         Item searchedItem = testSubject.findItem(item.getItemId());
         Assert.assertNotNull(searchedItem);

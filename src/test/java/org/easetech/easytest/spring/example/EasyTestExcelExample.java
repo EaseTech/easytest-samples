@@ -25,7 +25,7 @@ import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths={"xlsBasedDataForClass.xls"} , loaderType = LoaderType.EXCEL)
+@DataLoader(filePaths={"classpath:xlsBasedDataForClass.xls"} , loaderType = LoaderType.EXCEL)
 public class EasyTestExcelExample {
     
     private ItemService testSubject;
