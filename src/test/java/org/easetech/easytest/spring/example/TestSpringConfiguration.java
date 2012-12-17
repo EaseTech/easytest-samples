@@ -2,6 +2,8 @@
 package org.easetech.easytest.spring.example;
 
 
+import org.easetech.easytest.interceptor.SpringIntercept;
+
 import java.beans.PropertyEditorManager;
 import java.util.List;
 import junit.framework.Assert;
@@ -31,7 +33,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class TestSpringConfiguration {
 
     @Autowired
-    ItemService testSubject;
+    @SpringIntercept
+    public ItemService testSubject;
     
     /**
      * Example showing the usage of propertyEditors for getting custom object.

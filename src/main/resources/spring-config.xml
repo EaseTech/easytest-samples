@@ -8,9 +8,10 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
  <jdbc:embedded-database id="dataSource">
   <jdbc:script location="classpath:schema.sql" />
   <jdbc:script location="classpath:test-data.sql" />
+  
  </jdbc:embedded-database>
 
- <tx:annotation-driven />
+<!--  <tx:annotation-driven /> -->
 
 
  <bean id="entityManagerFactory"
