@@ -2,12 +2,11 @@
 package org.easetech.easytest.spring.example;
 
 
-import org.easetech.easytest.interceptor.SpringIntercept;
-
 import java.beans.PropertyEditorManager;
 import java.util.List;
 import junit.framework.Assert;
 import org.easetech.easytest.annotation.DataLoader;
+import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.SpringTestRunner;
@@ -33,8 +32,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class TestSpringConfiguration {
 
     @Autowired
-    @SpringIntercept
-    public ItemService testSubject;
+    @Intercept
+    private ItemService testSubject;
     
     /**
      * Example showing the usage of propertyEditors for getting custom object.
