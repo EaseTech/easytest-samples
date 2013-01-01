@@ -18,7 +18,7 @@ public class RealItemService implements ItemService {
         this.itemDao = itemDao;
     }
 
-    @Override
+    
     public List<Item> getItems(ItemId itemId, String searchText, String itemType) {
         
         return itemDao.select(itemType , searchText);
@@ -36,7 +36,7 @@ public class RealItemService implements ItemService {
         itemDao.insert(new ItemId(8L), "Superman", "journal");
     }
 
-    @Override
+    
     public Item findItem(ItemId itemId) {
         System.out.println(itemDao == null);
         System.out.println("findItems Called");
@@ -47,7 +47,7 @@ public class RealItemService implements ItemService {
     /**
      * 
      */
-    @Override
+    
     public void initialize() {
         insertTestData();
         
