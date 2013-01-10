@@ -1,27 +1,23 @@
 package org.easetech.easytest.spring.example;
 
-import junit.framework.Assert;
-
-import org.easetech.easytest.samples.ItemService;
-import org.easetech.easytest.samples.MockItemService;
-import org.junit.Before;
-
 import java.beans.PropertyEditorManager;
+import junit.framework.Assert;
 import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.converter.ConverterManager;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemConverter;
 import org.easetech.easytest.samples.ItemId;
 import org.easetech.easytest.samples.ItemIdEditor;
+import org.easetech.easytest.samples.ItemService;
+import org.easetech.easytest.samples.MockItemService;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths={"classpath:xmlBasedData.xml"} , loaderType= LoaderType.XML)
+@DataLoader(filePaths={"classpath:xmlBasedData.xml"})
 public class EasyTestConverterExample {
     
     private ItemService testSubject;

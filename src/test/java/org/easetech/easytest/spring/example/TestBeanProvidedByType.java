@@ -1,19 +1,14 @@
 package org.easetech.easytest.spring.example;
 
-import org.easetech.easytest.annotation.Intercept;
-
-import org.easetech.easytest.samples.RealItemService;
-
 import org.easetech.easytest.annotation.DataLoader;
+import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Provided;
 import org.easetech.easytest.annotation.TestConfigProvider;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;
-import org.easetech.easytest.samples.ItemService;
-import org.easetech.easytest.samples.LibraryId;
+import org.easetech.easytest.samples.RealItemService;
 import org.easetech.easytest.spring.config.TestConfig;
 import org.junit.Assert;
 import org.junit.Test;
@@ -36,7 +31,7 @@ public class TestBeanProvidedByType {
 
 
     @Test
-    @DataLoader(filePaths={"classpath:overrideExcelData.csv"} , loaderType=LoaderType.CSV)
+    @DataLoader(filePaths={"classpath:overrideExcelData.csv"})
     public Item getExcelTestDataWithDouble(@Param(name = "libraryId")
     Double libraryId, @Param(name = "itemId")
     Double itemId) {

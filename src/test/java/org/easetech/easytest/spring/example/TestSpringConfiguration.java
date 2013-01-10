@@ -8,7 +8,6 @@ import junit.framework.Assert;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.SpringTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;
@@ -26,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringTestRunner.class)
 @ContextConfiguration(classes = { XmlBusinessConfig.class }, loader = AnnotationConfigContextLoader.class)
-@DataLoader(filePaths = { "classpath:input-data.xml" }, loaderType = LoaderType.XML)
+@DataLoader(filePaths = { "classpath:input-data.xml" })
 @TransactionConfiguration(transactionManager="transactionManager" )
 @Transactional
 public class TestSpringConfiguration {

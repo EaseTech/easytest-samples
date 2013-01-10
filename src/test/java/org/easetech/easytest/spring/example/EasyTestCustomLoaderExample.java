@@ -1,9 +1,7 @@
 package org.easetech.easytest.spring.example;
 
 import junit.framework.Assert;
-
 import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;

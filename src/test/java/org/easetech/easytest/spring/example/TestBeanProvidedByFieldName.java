@@ -5,7 +5,6 @@ import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Provided;
 import org.easetech.easytest.annotation.TestConfigProvider;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;
@@ -32,7 +31,7 @@ public class TestBeanProvidedByFieldName {
 
 
     @Test
-    @DataLoader(filePaths={"classpath:overrideExcelData.csv"} , loaderType=LoaderType.CSV)
+    @DataLoader(filePaths={"classpath:overrideExcelData.csv"})
     public void getExcelTestDataWithDouble(@Param(name = "libraryId")
     Double libraryId, @Param(name = "itemId")
     Double itemId) {

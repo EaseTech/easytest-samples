@@ -19,7 +19,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = { "classpath:xmlBasedData.xml" }, loaderType = LoaderType.XML)
+@DataLoader(filePaths = { "classpath:xmlBasedData.xml" })
 public class EasyTestXMLExample {
 
     private ItemService testSubject;

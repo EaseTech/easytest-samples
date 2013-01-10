@@ -6,7 +6,6 @@ import junit.framework.Assert;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;
@@ -16,7 +15,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
-@DataLoader(filePaths = { "classpath:xmlBasedData.xml" }, loaderType = LoaderType.XML)
+@DataLoader(filePaths = { "xmlBasedData.xml" })
 public class EasyTestInterceptExample {
 
     //@Intercept(interceptor=EasyTestDefaultInterceptor.class)
