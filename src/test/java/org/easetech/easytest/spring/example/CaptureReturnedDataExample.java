@@ -27,9 +27,9 @@ public class CaptureReturnedDataExample {
 
     @Test
     public List<Item> getItemsData(
-        @Param(name="itemId") Long itemId , 
-        @Param(name="itemType") String itemType , 
-        @Param(name="expectedItems")int expectedItems){
+        @Param("itemId") Long itemId , 
+        @Param("itemType") String itemType , 
+        @Param("expectedItems")int expectedItems){
         List<Item> items = testSubject.getItems(new ItemId(itemId), "", itemType);
         Assert.assertEquals(expectedItems, items.size());
         return items;

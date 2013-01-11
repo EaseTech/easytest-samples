@@ -28,7 +28,7 @@ public class EasyTestCombinedExample {
     
     @Test
     @DataLoader(filePaths={"classpath:csvBasedData.csv"})
-    public void testCaseWithOneParameter(@Param(name="itemId")ItemId itemId){
+    public void testCaseWithOneParameter(@Param("itemId")ItemId itemId){
         System.out.println("testSimpleCaseWithOneParameter : " + itemId);
         Item item = testSubject.findItem(itemId);
         Assert.assertNotNull(item);
@@ -38,7 +38,7 @@ public class EasyTestCombinedExample {
     
     @Test
     @DataLoader(filePaths={"classpath:xmlBasedData.xml"})
-    public void getItemsData(@Param(name="itemId") ItemId itemId , @Param(name="itemType") String itemType , @Param(name="expectedItems")int expectedItems){
+    public void getItemsData(@Param("itemId") ItemId itemId , @Param("itemType") String itemType , @Param("expectedItems")int expectedItems){
         System.out.println(itemId + itemType + expectedItems);
         List<Item> items = testSubject.getItems(itemId, "", itemType);
         Assert.assertNotNull(items);

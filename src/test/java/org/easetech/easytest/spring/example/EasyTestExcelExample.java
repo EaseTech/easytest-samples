@@ -25,7 +25,7 @@ public class EasyTestExcelExample {
     }
     
     @Test
-    public void testCaseWithItemId(@Param(name="itemId")String itemId ){
+    public void testCaseWithItemId(@Param("itemId")String itemId ){
         System.out.println("testCaseWithOneParameter :" + itemId);
         ItemId id = new ItemId(Long.valueOf(itemId));
         Item item = testSubject.findItem(id);
