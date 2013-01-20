@@ -25,9 +25,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringTestRunner.class)
 @ContextConfiguration(classes = { XmlBusinessConfig.class }, loader = AnnotationConfigContextLoader.class)
-@DataLoader(filePaths = { "classpath:input-data.xml" })
 @TransactionConfiguration(transactionManager="transactionManager" )
 @Transactional
+@DataLoader(filePaths = { "classpath:input-data.xml" })
 public class TestSpringConfiguration {
 
     @Autowired
@@ -49,7 +49,7 @@ public class TestSpringConfiguration {
 
     
     @Test
-    public void getItemsDataUsingXMLLoader(@Param("searchText") String searchText, @Param("itemType") String itemType, ItemId itemId , @Param("expectedItems") int expectedItems) {
+    public void getItemsDataUsingXMLLoader(@Param(name="searchText") String searchText, @Param(name="itemType") String itemType, ItemId itemId , @Param(name="expectedItems") int expectedItems) {
         System.out.println(testSubject == null);
         List<Item> items = testSubject.getItems(itemId, searchText, itemType);
         Assert.assertNotNull(items);

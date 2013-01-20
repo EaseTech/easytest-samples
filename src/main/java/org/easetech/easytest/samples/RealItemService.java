@@ -2,10 +2,22 @@
 package org.easetech.easytest.samples;
 
 import java.util.List;
+import org.easetech.easytest.io.ClasspathResource;
 import org.easetech.easytest.samples.dao.ItemDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RealItemService implements ItemService {
+    
+    public static void main(String[] args){
+        try {
+            Class c = Class.forName("org.easetech.easytest.annotation.Converters");
+            //Class c = Class.forName("org//easetech//easytest//samples//Item.class");
+            System.out.println(c);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
     
     @Autowired
     private ItemDaoImpl itemDao;

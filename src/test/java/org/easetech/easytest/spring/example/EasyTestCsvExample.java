@@ -31,7 +31,7 @@ public class EasyTestCsvExample {
     }
 
     @Test
-    public void testCaseWithOneParameter(@Param( "itemId")
+    public void testCaseWithOneParameter(@Param(name= "itemId")
     int itemId) {
         
         System.out.println("testSimpleCaseWithOneParameter : " + itemId);
@@ -43,8 +43,8 @@ public class EasyTestCsvExample {
     }
 
     @Test
-    public void testCaseWithTwoParameter(@Param( "itemId")
-    int itemId, @Param( "itemType")
+    public void testCaseWithTwoParameter(@Param(name= "itemId")
+    int itemId, @Param(name= "itemType")
     String itemType) {
         System.out.println("testSimpleCaseWithTwoParameter : " + itemId + " and itemType :" + itemType);
         ItemId id = new ItemId(Long.valueOf(itemId));
@@ -55,8 +55,8 @@ public class EasyTestCsvExample {
 
 //     UNCOMMENT AND INTRODUCE YOUR OWN DATA
 //     @Test
-//     public void testCaseWithThreeParameter(@Param(name="itemId")int itemId , @Param(name="itemType")String itemType ,
-//     @Param(name="searchText")String searchText){
+//     public void testCaseWithThreeParameter(@Param(name=name="itemId")int itemId , @Param(name=name="itemType")String itemType ,
+//     @Param(name=name="searchText")String searchText){
 //     System.out.println("testSimpleCaseWithTwoParameter : " + itemId +" and itemType :" + itemType +
 //     " searchText is :" + searchText );   
 //            ItemId id = new ItemId(Long.valueOf(itemId));

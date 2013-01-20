@@ -37,9 +37,9 @@ public class EasyTestXMLExample {
 
     //This will fail because expectedItems is of type String whereas items.size() is of type int.
     @Test
-    public void getItemsData(@Param( "itemId")
-    String itemId, @Param( "itemType")
-    String itemType, @Param( "expectedItems")
+    public void getItemsData(@Param(name= "itemId")
+    String itemId, @Param(name= "itemType")
+    String itemType, @Param(name= "expectedItems")
     int expectedItems) {
         ItemId id = new ItemId(Long.valueOf(itemId)) ;
         List<Item> items = testSubject.getItems(id, "", itemType);       
@@ -50,8 +50,8 @@ public class EasyTestXMLExample {
     //UNCOMMENT THIS, INTRODUCE THE DATA IN xmlBasedData.xml FOR THIS METHOD AND RUN
 //    @Test
 //    public void getItemsDataWithStrongType(@Param
-//    ItemId itemId, @Param( "itemType")
-//    String itemType, @Param( "expectedItems")
+//    ItemId itemId, @Param(name= "itemType")
+//    String itemType, @Param(name= "expectedItems")
 //    int expectedItems) {
 //        List<Item> items = testSubject.getItems(itemId, "", itemType);       
 //        Assert.assertNotNull(items);

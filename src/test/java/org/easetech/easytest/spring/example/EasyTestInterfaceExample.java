@@ -26,7 +26,7 @@ public class EasyTestInterfaceExample {
     }
     
     @Test
-    public void testMethod(ItemInterface item , @Param("expectedItemId") ItemId itemId){
+    public void testMethod(ItemInterface item , @Param(name="expectedItemId") ItemId itemId){
         Assert.assertNotNull(item);
         Assert.assertEquals(itemId.getValue(), item.getItemId().getValue());
         System.out.println(item.getItemDescription());

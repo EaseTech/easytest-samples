@@ -25,7 +25,7 @@ public class EasyTestExcelExample {
     }
     
     @Test
-    public void testCaseWithItemId(@Param("itemId")String itemId ){
+    public void testCaseWithItemId(@Param(name="itemId")String itemId ){
         System.out.println("testCaseWithOneParameter :" + itemId);
         ItemId id = new ItemId(Long.valueOf(itemId));
         Item item = testSubject.findItem(id);
@@ -37,7 +37,7 @@ public class EasyTestExcelExample {
     //UNCOMMENT THIS AND ADD DATA FOR THIS METHOD IN xlsBasedDataForClass.xls file under src/test/resources
     
 //    @Test
-//    public void testCaseWithSearchText(@Param(name="searchText")String searchText ){
+//    public void testCaseWithSearchText(@Param(name=name="searchText")String searchText ){
 //        System.out.println("testCaseWithOneParameterFromClassData :" + searchText);
 //        Item item = testSubject.getItemFromSearchText(searchText);
 //        Assert.assertNotNull(item);

@@ -30,8 +30,8 @@ public class TestBeanProvidedByName {
 
     @Test
     @DataLoader(filePaths={"classpath:overrideExcelData.csv"})
-    public Item getExcelTestDataWithDouble(@Param( "libraryId")
-    Double libraryId, @Param( "itemId")
+    public Item getExcelTestDataWithDouble(@Param(name= "libraryId")
+    Double libraryId, @Param(name= "itemId")
     Double itemId) {
         Assert.assertNotNull(itemService);
         System.out.print("Executing getExcelTestDataWithDouble :");

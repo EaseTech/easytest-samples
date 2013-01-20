@@ -23,9 +23,9 @@ public class EasyTestInterceptExample {
     public ItemService itemService = new MockItemService();
 
     @Test
-    public List<Item> getItemsData(@Param( "itemId")
-    ItemId itemId, @Param( "itemType")
-    String itemType, @Param( "expectedItems")
+    public List<Item> getItemsData(@Param(name= "itemId")
+    ItemId itemId, @Param(name= "itemType")
+    String itemType, @Param(name= "expectedItems")
     int expectedItems) {
         List<Item> items = itemService.getItems(itemId, "", itemType);
         Assert.assertEquals(expectedItems, items.size());
