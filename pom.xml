@@ -12,7 +12,7 @@
  <description>EasyTest is a JUnit extension perform Data Driven Testing with ease and simplicity. 
     It supports method parameters with Test annotation and much more.</description>
  <url>https://github.com/EaseTech/easytest</url>
- <version>1.0-SNAPSHOT</version>
+ <version>1.2.2-SNAPSHOT</version>
 
  <developers>
   <developer>
@@ -38,11 +38,11 @@
  </build>
 
  <dependencies>
-  <dependency>
-   <groupId>junit</groupId>
-   <artifactId>junit</artifactId>
-   <version>4.10</version>
-  </dependency>
+<!--   <dependency> -->
+<!--    <groupId>junit</groupId> -->
+<!--    <artifactId>junit</artifactId> -->
+<!--    <version>4.10</version> -->
+<!--   </dependency> -->
 
   <dependency>
    <groupId>org.slf4j</groupId>
@@ -185,7 +185,13 @@
   <dependency>
    <groupId>org.easetech</groupId>
    <artifactId>easytest-spring</artifactId>
-   <version>1.0-SNAPSHOT</version>
+   <version>1.2.2</version>
+   <exclusions>
+    <exclusion>
+        <groupId>javaee</groupId>
+        <artifactId>javaee-api</artifactId>
+    </exclusion>
+   </exclusions>
   </dependency>
   
   <dependency>
@@ -205,6 +211,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>3.6.5.Final</version>
         </dependency>
+     
         
         <dependency>
             <groupId>commons-dbcp</groupId>

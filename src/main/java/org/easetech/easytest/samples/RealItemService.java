@@ -2,7 +2,6 @@
 package org.easetech.easytest.samples;
 
 import java.util.List;
-import org.easetech.easytest.io.ClasspathResource;
 import org.easetech.easytest.samples.dao.ItemDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
