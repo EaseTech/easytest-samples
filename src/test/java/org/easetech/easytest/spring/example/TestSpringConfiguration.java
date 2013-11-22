@@ -44,7 +44,12 @@ public class TestSpringConfiguration {
     
     @Test
     public void testSimple(){
-        System.out.println(testSubject == null);
+        Assert.fail("This is a deliberate failure");
+    }
+    
+    @Test
+    public void testThrowException(){
+        throw new RuntimeException("Error occured");
     }
 
     
