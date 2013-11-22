@@ -5,9 +5,9 @@ package org.easetech.easytest.spring.example;
 import java.beans.PropertyEditorManager;
 import java.util.List;
 import junit.framework.Assert;
-import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Intercept;
 import org.easetech.easytest.annotation.Param;
+import org.easetech.easytest.annotation.TestPolicy;
 import org.easetech.easytest.runner.SpringTestRunner;
 import org.easetech.easytest.samples.Item;
 import org.easetech.easytest.samples.ItemId;
@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 @ContextConfiguration(classes = { XmlBusinessConfig.class }, loader = AnnotationConfigContextLoader.class)
 @TransactionConfiguration(transactionManager="transactionManager" )
 @Transactional
-@DataLoader(filePaths = { "classpath:input-data.xml" })
+@TestPolicy(SpringPolicy.class)
 public class TestSpringConfiguration {
 
     @Autowired
